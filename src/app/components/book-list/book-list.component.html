@@ -1,0 +1,31 @@
+<h1>Books</h1>
+
+<div class="form-group w-25">
+  <label for="filter">Filter</label>
+  <div class="input-group">
+    <input #element (input)="onFilter(element.value)" [disabled]="this.origBooks.length === 0" class="form-control"
+           id="filter" type="text">
+    <button class="btn btn-outline-secondary" (click)="element.value = ''; onFilter('')" type="button">Clear</button>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Title</th>
+    <th scope="col">Author</th>
+    <th scope="col">Language</th>
+    <th scope="col">Year</th>
+    <th scope="col">Country</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books">
+    <td><a routerLink="/book/{{book.isbn}}">{{book.title}}</a></td>
+    <td>{{book.author}}</td>
+    <td>{{book.language}}</td>
+    <td>{{book.year}}</td>
+    <td>{{book.country}}</td>
+  </tr>
+  </tbody>
+</table>

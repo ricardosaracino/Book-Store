@@ -1,0 +1,13 @@
+<ngx-loading-bar color="#007bff" [includeSpinner]="false" height=".2em"></ngx-loading-bar>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Book Store</a>
+  <div id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" routerLink="/books">Browse Books</a>
+      <a class="nav-item nav-link active" routerLink="/book">Add Book</a>
+    </div>
+  </div>
+</nav>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
