@@ -1,2 +1,2 @@
 # Book-Store
-angular redux 
+Refactoring a simple angular application to use Redux
